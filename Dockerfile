@@ -33,6 +33,7 @@ RUN mkdir -p /root/workspace
 WORKDIR /root
 
 COPY support .
+RUN ./setup-toolchain.sh
 RUN cat setup-env.sh >> .bashrc
 
 VOLUME /root/workspace
